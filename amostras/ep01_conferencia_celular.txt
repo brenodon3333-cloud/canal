@@ -1,0 +1,55 @@
+trilhas: Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080, 12000 kb/s, 24 fps, 24 tbr, 12288 tbn (default) | Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 188 kb/s (default)
+duração: 00:01:33.50
+loudness integrada: -16.0 LUFS estéreo · -19.1 LUFS somado em mono · pico real -1.2 dBTP
+correlação L/R: 0.96 (perto de 1 = seguro em mono; negativo = cancela)
+
+celular simulado (mono, 300 Hz–7 kHz): voz = -14.7 dB (referência)
+evento | instante | nível relativo à voz no celular | nível relativo, faixa cheia
+música do vizinho pelo teto (só graves)                    |   0.00 s |  -14.0 dB |   -0.2 dB
+VASSOURA BATE NO TETO 1                                    |   1.25 s |   -6.0 dB |   -5.9 dB
+VASSOURA BATE NO TETO 2                                    |   1.82 s |   -4.8 dB |   -3.3 dB
+VASSOURA BATE NO TETO 3                                    |   2.32 s |   -3.7 dB |   -2.5 dB
+roupa: ela abaixa a vassoura                               |   6.25 s |   -2.2 dB |   -4.3 dB | sob a voz: medida inclui a fala
+a música recomeça, baixinho                                |   8.92 s |  -30.1 dB |   -6.7 dB
+botão do elevador                                          |  11.24 s |  -18.6 dB |  -22.8 dB
+plim de chegada                                            |  14.80 s |   -6.9 dB |  -10.2 dB
+portas abrindo                                             |  14.85 s |   -6.9 dB |  -10.2 dB
+portas terminam de abrir                                   |  15.65 s |  -18.2 dB |  -19.6 dB
+pé recua                                                   |  16.15 s |  -17.3 dB |  -15.6 dB
+passo 1                                                    |  17.15 s |  -16.9 dB |  -14.5 dB
+passo 2                                                    |  17.65 s |  -16.9 dB |  -15.5 dB
+pé pousa no piso do elevador                               |  17.97 s |   -9.9 dB |   -9.3 dB
+portas fechando atrás da câmera                            |  18.35 s |  -13.6 dB |  -14.9 dB
+portas fecham                                              |  19.15 s |  -14.2 dB |  -14.0 dB
+"Bom dia." aparece (peça de madeira)                       |  21.85 s |   -4.2 dB |   -6.0 dB
+ela ajeita a alça da sacola                                |  25.55 s |  -10.3 dB |   -6.6 dB
+ESTALO DO CABO                                             |  34.35 s |   -4.8 dB |   -6.3 dB
+TRANCO                                                     |  36.10 s |   +2.1 dB |   -1.8 dB
+susto dela (ar preso)                                      |  36.18 s |   +0.6 dB |   -3.2 dB
+MÃO AGARRA O CORRIMÃO                                      |  40.15 s |   -5.9 dB |   -9.9 dB
+chaveiro balança                                           |  40.16 s |   -6.7 dB |  -10.5 dB
+respiração curta dela                                      |  40.45 s |   -7.9 dB |  -11.7 dB
+mão toca o fone                                            |  47.85 s |   -7.4 dB |  -11.2 dB
+fone sai das orelhas                                       |  47.90 s |   -2.1 dB |   -7.6 dB
+ele engole seco                                            |  58.65 s |   -2.7 dB |   -5.7 dB
+botão do fone: a música para                               |  60.55 s |   -8.0 dB |  -12.9 dB
+"Bom dia." dele aparece (peça menor)                       |  63.85 s |   -3.4 dB |   -8.5 dB
+AS FRASES SE ENCAIXAM                                      |  64.85 s |   -0.4 dB |   -6.0 dB
+motor volta (tranco do freio soltando)                     |  64.85 s |   -0.4 dB |   -6.0 dB
+luz volta (relé)                                           |  64.90 s |  -14.7 dB |  -13.1 dB
+plim no térreo                                             |  68.45 s |   -2.5 dB |   -8.5 dB
+portas do térreo                                           |  68.55 s |   -2.5 dB |   -8.5 dB
+passos do Caio (tênis, para a esquerda)                    |  69.70 s |  -13.9 dB |  -14.4 dB
+passos da Lurdes (para a direita)                          |  69.95 s |  -14.7 dB |  -14.3 dB
+portas fecham no saguão vazio                              |  73.65 s |  -23.3 dB |  -24.6 dB
+a música começa de novo no teto                            |  75.68 s |  -12.6 dB |   +0.7 dB
+mão no encosto do sofá                                     |  77.38 s |  -14.4 dB |   +0.6 dB
+pé afunda no assento                                       |  77.68 s |  -15.2 dB |   +0.5 dB
+outro pé no assento                                        |  78.78 s |  -14.1 dB |   +0.6 dB
+ela levanta a vassoura                                     |  79.48 s |  -15.0 dB |   +0.7 dB
+relógio no quase silêncio                                  |  81.30 s |  -14.9 dB |  -17.9 dB
+DUAS BATIDINHAS DE CIMA                                    |  81.98 s |   -2.6 dB |   -3.4 dB
+duas batidinhas da vassoura, de leve                       |  83.68 s |   -4.6 dB |   -5.1 dB
+
+pausa · escuro de abertura 0.2-0.9 s: -13.7 dB no celular
+pausa · entre falas 4.0-4.2 s: -2.1 dB no celular

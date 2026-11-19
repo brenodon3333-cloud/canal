@@ -1,0 +1,55 @@
+Alcance de mãos e pés (px que faltaram; precisa ser 0 nos gestos):
+  Lurdes: vassoura no teto: 0.0
+  Lurdes: botão: 0.0
+  Caio: botão do fone: 0.0
+  Lurdes: corrimão: 0.0
+  Lurdes: vassoura (noite 2): 0.0
+  Lurdes: mão no encosto: 0.0
+Maior falta em qualquer quadro: 0.0 px
+
+Contatos (o som é posto no mesmo instante):
+  1.250 s  vassoura bate no teto 1
+  1.820 s  vassoura bate no teto 2
+  2.320 s  vassoura bate no teto 3
+  11.240 s  dedo aperta o botão do elevador
+  14.800 s  luz de chegada acende (plim)
+  15.650 s  portas terminam de abrir
+  16.150 s  pé recua
+  17.150 s  passo 1
+  17.650 s  passo 2
+  17.970 s  pé pousa dentro do elevador
+  21.850 s  "Bom dia." aparece
+  36.100 s  tranco
+  40.150 s  mão agarra o corrimão
+  47.850 s  mão toca o fone
+  60.550 s  dedo aperta o botão do fone
+  63.850 s  "Bom dia." dele aparece
+  64.850 s  as duas frases se encaixam
+  68.450 s  portas do térreo começam a abrir (plim)
+  69.700 s  passo do Caio 1
+  70.150 s  passo do Caio 2
+  70.600 s  passo do Caio 3
+  71.050 s  passo do Caio 4
+  71.500 s  passo do Caio 5
+  71.950 s  passo do Caio 6
+  72.400 s  passo do Caio 7
+  72.850 s  passo do Caio 8
+  73.300 s  passo do Caio 9
+  69.950 s  passo da Lurdes 1
+  70.350 s  passo da Lurdes 2
+  70.750 s  passo da Lurdes 3
+  71.150 s  passo da Lurdes 4
+  71.550 s  passo da Lurdes 5
+  71.950 s  passo da Lurdes 6
+  72.350 s  passo da Lurdes 7
+  72.750 s  passo da Lurdes 8
+  73.150 s  passo da Lurdes 9
+  73.550 s  passo da Lurdes 10
+  73.950 s  passo da Lurdes 11
+  77.380 s  mão no encosto do sofá
+  77.680 s  pé no assento
+  78.780 s  outro pé no assento
+  81.980 s  batida de cima 1
+  82.330 s  batida de cima 2
+  83.680 s  vassoura toca o teto de leve 1
+  84.130 s  vassoura toca o teto de leve 2

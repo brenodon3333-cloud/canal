@@ -1,0 +1,157 @@
+Alcance de mãos e pés (px que faltaram; precisa ser 0 nos gestos):
+  Caio: fone: 0.0
+  Arlindo: botão: 0.0
+  Lurdes: sacola: 0.0
+  Arlindo: livro: 0.0
+  Arlindo: botão (de pé): 0.0
+  Arlindo: interfone: 0.0
+  Lurdes: botão: 0.0
+  Arlindo: oferece o pão: 0.0
+  Lurdes: pega o pão: 0.0
+Maior falta em qualquer quadro: 0.0 px
+
+Contatos (o som é posto no mesmo instante):
+  3.500 s  tec 1 (gancho)
+  3.700 s  tec 2 (gancho)
+  4.200 s  caneta pousa no papel (gancho)
+  4.950 s  página cai 1
+  5.290 s  página cai 2
+  5.562 s  página cai 3
+  5.780 s  página cai 4
+  5.954 s  página cai 5
+  6.093 s  página cai 6
+  6.204 s  página cai 7
+  6.301 s  página cai 8
+  13.100 s  plim (Caio)
+  14.000 s  portas do elevador abertas (Caio)
+  14.550 s  passo do Caio 1
+  15.000 s  passo do Caio 2
+  15.450 s  passo do Caio 3
+  15.900 s  passo do Caio 4
+  16.350 s  passo do Caio 5
+  16.800 s  passo do Caio 6
+  17.000 s  "Bom dia." dele (Arlindo)
+  17.400 s  mão toca o fone
+  18.200 s  "Bom dia." do Caio
+  18.800 s  encaixe (Caio)
+  19.600 s  letra 1 aparece (Caio)
+  19.760 s  letra 2 aparece (Caio)
+  19.920 s  letra 3 aparece (Caio)
+  20.240 s  letra 5 aparece (Caio)
+  20.400 s  letra 6 aparece (Caio)
+  20.560 s  letra 7 aparece (Caio)
+  22.146 s  letra 1 bate no chão
+  22.260 s  letra 2 bate no chão
+  22.373 s  letra 3 bate no chão
+  22.590 s  letra 5 bate no chão
+  22.703 s  letra 6 bate no chão
+  22.800 s  mão toca o fone (põe)
+  22.806 s  letra 7 bate no chão
+  24.300 s  passo do Caio saindo 1
+  24.750 s  passo do Caio saindo 2
+  25.200 s  passo do Caio saindo 3
+  25.408 s  dedo aperta o botão da porta (Caio)
+  25.558 s  porta de vidro abre (Caio)
+  25.650 s  passo do Caio saindo 4
+  26.100 s  passo do Caio saindo 5
+  26.550 s  passo do Caio saindo 6
+  27.000 s  passo do Caio saindo 7
+  27.450 s  passo do Caio saindo 8
+  27.900 s  passo do Caio saindo 9
+  28.350 s  passo do Caio saindo 10
+  28.800 s  passo do Caio saindo 11
+  29.560 s  dedo encosta na caneta
+  29.900 s  porta fecha (Caio)
+  32.260 s  plim (Lurdes)
+  33.660 s  passo da Lurdes 1
+  34.060 s  passo da Lurdes 2
+  34.460 s  passo da Lurdes 3
+  34.860 s  passo da Lurdes 4
+  35.260 s  passo da Lurdes 5
+  35.660 s  passo da Lurdes 6
+  36.060 s  passo da Lurdes 7
+  36.560 s  letra 1 aparece (Lurdes)
+  36.960 s  letra 3 aparece (Lurdes)
+  37.160 s  letra 4 aparece (Lurdes)
+  37.360 s  letra 5 aparece (Lurdes)
+  38.810 s  mão pega a sacola
+  39.515 s  letra 1 cai na sacola
+  39.755 s  letra 3 cai na sacola
+  39.875 s  letra 4 cai na sacola
+  39.995 s  letra 5 cai na sacola
+  40.660 s  "Até amanhã." dela
+  41.160 s  "Até amanhã." dele
+  41.760 s  encaixe (Lurdes)
+  42.760 s  passo da Lurdes saindo 1
+  42.960 s  dedo aperta o botão da porta (Lurdes)
+  43.110 s  porta de vidro abre (Lurdes)
+  43.160 s  passo da Lurdes saindo 2
+  43.560 s  passo da Lurdes saindo 3
+  43.810 s  portas do elevador abertas (Lurdes)
+  43.960 s  passo da Lurdes saindo 4
+  44.360 s  passo da Lurdes saindo 5
+  44.760 s  passo da Lurdes saindo 6
+  45.160 s  passo da Lurdes saindo 7
+  45.560 s  passo da Lurdes saindo 8
+  47.160 s  passo da Lurdes lá fora 1
+  47.560 s  passo da Lurdes lá fora 2
+  47.960 s  passo da Lurdes lá fora 3
+  48.360 s  passo da Lurdes lá fora 4
+  48.760 s  passo da Lurdes lá fora 5
+  49.160 s  passo da Lurdes lá fora 6
+  49.160 s  porta fecha (Lurdes)
+  49.760 s  mão pega a caneta (anota)
+  51.560 s  tec 1 (anota)
+  51.760 s  tec 2 (anota)
+  52.160 s  caneta pousa (anota)
+  53.260 s  garfo raspa a marmita 1
+  55.460 s  garfo raspa a marmita 2
+  57.860 s  garfo raspa a marmita 3
+  63.360 s  garfo raspa a marmita 4
+  68.060 s  dedo encosta na caneta torta
+  80.560 s  capa do livro cai aberta
+  87.160 s  mão pega o canto da página
+  87.960 s  página vira e cai
+  96.860 s  mão pega a caneta (assina)
+  97.460 s  tec (assina, antes)
+  101.560 s  tec 1 (assina)
+  101.760 s  tec 2 (assina)
+  102.260 s  caneta pousa torta
+  104.210 s  dedo aperta o botão (ele mesmo)
+  104.360 s  porta abre (ele sai)
+  105.210 s  passo do Arlindo saindo 1
+  105.660 s  passo do Arlindo saindo 2
+  106.110 s  passo do Arlindo saindo 3
+  106.560 s  passo do Arlindo saindo 4
+  107.010 s  passo do Arlindo saindo 5
+  107.460 s  passo do Arlindo saindo 6
+  107.910 s  passo do Arlindo saindo 7
+  108.360 s  passo do Arlindo saindo 8
+  108.810 s  passo do Arlindo saindo 9
+  109.260 s  passo do Arlindo saindo 10
+  109.710 s  passo do Arlindo saindo 11
+  109.910 s  porta fecha (ele saiu)
+  110.160 s  passo do Arlindo saindo 12
+  110.610 s  passo do Arlindo saindo 13
+  116.230 s  dedo no interfone (de fora)
+  116.630 s  plim (Lurdes, manhã seguinte)
+  117.930 s  passo da Lurdes 1 (manhã seguinte)
+  118.330 s  passo da Lurdes 2 (manhã seguinte)
+  118.730 s  passo da Lurdes 3 (manhã seguinte)
+  119.130 s  passo da Lurdes 4 (manhã seguinte)
+  119.530 s  passo da Lurdes 5 (manhã seguinte)
+  119.930 s  passo da Lurdes 6 (manhã seguinte)
+  120.330 s  passo da Lurdes 7 (manhã seguinte)
+  123.080 s  DEDO DA LURDES APERTA O BOTÃO DA PORTA
+  123.230 s  porta abre para ele
+  124.480 s  passo do Arlindo entrando 1
+  124.930 s  passo do Arlindo entrando 2
+  125.380 s  passo do Arlindo entrando 3
+  125.830 s  passo do Arlindo entrando 4
+  125.980 s  porta fecha (ele entrou)
+  126.280 s  passo do Arlindo entrando 5
+  126.730 s  passo do Arlindo entrando 6
+  127.130 s  "Bom dia." dele (fim)
+  127.530 s  "Bom dia." dela (fim)
+  128.130 s  ENCAIXE FINAL
+  129.730 s  mão dela pega o saco de pão
