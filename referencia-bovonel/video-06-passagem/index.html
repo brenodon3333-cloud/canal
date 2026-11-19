@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Bovonel · Vídeo 06</title>
+<style>
+  html, body { margin: 0; background: #000; }
+  canvas { display: block; width: 1920px; height: 1080px; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script type="module">
+// Motor do vídeo: recebe a linha do tempo da narração, monta as cenas
+// e desenha qualquer instante `ta` (segundos do áudio).
+import { W, H, clamp, ease, prog } from './lib.js';
+import { evalCam, liveCam, applyCam, backgroundLive, dust, grain, vignette, flash } from './fx.js';
+import { SCENES } from './scenes.js';
+
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d', { alpha: false });
+const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean);
+
+let TL = null, BUILT = null, CUE_ERRORS = [];
+// Vídeo 02: os instantes vêm do começo real de cada palavra (tools/alinhar.mjs), sem adiantar.
+const LEAD = 0;
+
+function makeK(seg) {
+  const toks = seg.words.map((w) => norm(w.w).join(''));
+  const K = (phrase, off = 0) => {
+    const p = norm(phrase);
+    for (let i = 0; i + p.length <= toks.length; i++) {
+      if (p.every((x, j) => toks[i + j] === x)) return seg.words[i].t + LEAD + off;
+    }
+    CUE_ERRORS.push(`cena ${seg.scene + 1}: "${phrase}"`);
+    return 1e9;
+  };
+  return K;
+}
+
+function setup(timeline) {
+  TL = timeline;
+  CUE_ERRORS = [];
+  BUILT = timeline.map((seg) => {
+    const b = SCENES[seg.scene].build(makeK(seg));
+    b.dur = seg.segEnd - seg.segStart;
+    return b;
+  });
+  const events = [];
+  BUILT.forEach((b, i) => {
+    const s0 = TL[i].segStart;
+    for (const [t, name, g, o] of b.sfx) events.push([s0 + t, name, g, o]);
+    // vídeo 05: transições discretas. 'push' = a câmera leva para a próxima cena (só um sopro baixo); 'cut' = corte seco
+    if (i > 0 && (b.trans || 'cut') === 'push') events.push([s0 - 0.28, 'swoosh', 0.35]);
+  });
+  events.sort((a, b) => a[0] - b[0]);
+  // momentos de impacto da câmera (tempo absoluto): a trilha bate junto
+  const impacts = BUILT.flatMap((b, i) => (b.impacts || []).map((t) => +(TL[i].segStart + t).toFixed(4)));
+  return { errors: CUE_ERRORS, events, impacts, trans: BUILT.map((b) => b.trans || 'cut') };
+}
+
+function frame(ta) {
+  let i = TL.length - 1;
+  for (let k = 0; k < TL.length; k++) if (ta < TL[k].segEnd) { i = k; break; }
+  const seg = TL[i], b = BUILT[i];
+  const t = ta - seg.segStart;
+  let cam = liveCam(evalCam(b.cam, t), t, b.impacts, i * 1.7);
+  // Transições do vídeo 05 (feedback do vídeo 04: transições exageradas). b.trans é como a cena ENTRA:
+  // 'cut' corte seco; 'push' a câmera desliza para o lado e a cena seguinte chega já em movimento (0,3 s).
+  let alpha = 1;
+  const dOut = seg.segEnd - ta, dIn = t;
+  const nextT = i < TL.length - 1 ? (BUILT[i + 1].trans || 'cut') : null;
+  const myT = b.trans || 'cut';
+  if (nextT === 'push' && dOut < 0.3) { const p = ease.in(1 - dOut / 0.3); cam = { ...cam, x: cam.x + 340 * p / cam.z }; alpha = 1 - 0.85 * p; }
+  if (i > 0 && myT === 'push' && dIn < 0.35) { const q = ease.out(dIn / 0.35); cam = { ...cam, x: cam.x - 340 * (1 - q) / cam.z }; alpha = Math.min(alpha, 0.15 + 0.85 * q); }
+  if (i === TL.length - 1) alpha = Math.min(alpha, clamp(dOut / 1.5));
+
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.globalAlpha = 1;
+  ctx.globalCompositeOperation = 'source-over';
+  backgroundLive(ctx, ta, cam, b.accent || '#3b82f6');
+  dust(ctx, ta, cam);
+  ctx.save();
+  ctx.globalAlpha = alpha;
+  applyCam(ctx, cam);
+  b.draw(ctx, t, cam);
+  ctx.restore();
+  if (b.overlay) { ctx.save(); ctx.globalAlpha = alpha; b.overlay(ctx, t, cam); ctx.restore(); }
+  vignette(ctx);
+  grain(ctx, ta);
+  if (ta < 0.6) { ctx.fillStyle = `rgba(0,0,0,${1 - ta / 0.6})`; ctx.fillRect(0, 0, W, H); }
+}
+
+
+window.setup = (timeline) => setup(timeline);
+window.frame = (ta) => { frame(ta); return true; };
+
+// Mixagem: decodifica a narração e renderiza efeitos + trilha + voz.
+window.mixAudio = async (voiceB64, events, total, sections) => {
+  const bytes = Uint8Array.from(atob(voiceB64), (c) => c.charCodeAt(0));
+  const voice = await new OfflineAudioContext(1, 1, 48000).decodeAudioData(bytes.buffer);
+  const r = await renderMix(voice, events, total, sections);
+  // envia o PCM em pedaços para o Node
+  const u8 = new Uint8Array(r.pcm.buffer);
+  const CH = 3 << 20;
+  for (let o = 0; o < u8.length; o += CH) {
+    let s = '';
+    const part = u8.subarray(o, o + CH);
+    for (let j = 0; j < part.length; j += 0x8000) s += String.fromCharCode.apply(null, part.subarray(j, j + 0x8000));
+    await window.__chunk(btoa(s));
+  }
+  return { peak: r.peak, samples: r.pcm.length, sampleRate: r.sampleRate };
+};
+
+// Grava a imagem em tempo real (o áudio entra depois, na montagem do arquivo).
+window.record = async (total, mimeType, bitrate, start = 0) => {
+  frame(start);
+  const stream = canvas.captureStream(30);
+  const rec = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: bitrate });
+  let queue = Promise.resolve();
+  rec.ondataavailable = (e) => {
+    if (!e.data || e.data.size === 0) return;
+    const blob = e.data;
+    queue = queue.then(() => new Promise((res) => {
+      const fr = new FileReader();
+      fr.onload = async () => { await window.__chunk(fr.result.split(',')[1]); res(); };
+      fr.readAsDataURL(blob);
+    }));
+  };
+  const stopped = new Promise((res) => { rec.onstop = res; });
+  rec.start(1000);
+  const t0 = performance.now();
+  let frames = 0, slow = 0, last = 0, worst = 0;
+  await new Promise((done) => {
+    function tick() {
+      const now = performance.now();
+      if (last) { const gap = now - last; worst = Math.max(worst, gap); if (gap > 50) slow++; }
+      last = now;
+      const ta = (now - t0) / 1000;
+      if (ta >= total) { done(); return; }
+      frame(start + ta);
+      frames++;
+      setTimeout(tick, Math.max(0, 1000 / 60 - (performance.now() - now)));
+    }
+    tick();
+  });
+  rec.stop();
+  await stopped;
+  await queue;
+  return { frames, slow, worst, seconds: (performance.now() - t0) / 1000 };
+};
+// Codifica quadro a quadro (WebCodecs): cada quadro é desenhado no tempo exato (i/fps), sem relógio real,
+// então nenhum quadro se perde, por mais pesada que seja a cena.
+window.encode = async (total, bitrate, start = 0, fps = 30) => {
+  const n = Math.round(total * fps);
+  const samples = [];
+  let avcC = null, color = null, err = null, pend = [], pendBytes = 0, sending = Promise.resolve();
+  const flush = () => {
+    if (!pendBytes) return;
+    const all = new Uint8Array(pendBytes); let o = 0;
+    for (const x of pend) { all.set(x, o); o += x.length; }
+    pend = []; pendBytes = 0;
+    sending = sending.then(async () => {
+      for (let p = 0; p < all.length; p += 3 << 20) {
+        const part = all.subarray(p, p + (3 << 20)); let s = '';
+        for (let j = 0; j < part.length; j += 0x8000) s += String.fromCharCode.apply(null, part.subarray(j, j + 0x8000));
+        await window.__chunk(btoa(s));
+      }
+    });
+  };
+  const enc = new VideoEncoder({
+    output: (ch, md) => {
+      if (md && md.decoderConfig) {
+        if (md.decoderConfig.description && !avcC) avcC = Array.from(new Uint8Array(md.decoderConfig.description instanceof ArrayBuffer ? md.decoderConfig.description : md.decoderConfig.description.buffer));
+        if (md.decoderConfig.colorSpace && !color) color = md.decoderConfig.colorSpace;
+      }
+      const b = new Uint8Array(ch.byteLength); ch.copyTo(b);
+      samples.push([b.length, ch.type === 'key' ? 1 : 0]);
+      pend.push(b); pendBytes += b.length;
+      if (pendBytes > (8 << 20)) flush();
+    },
+    error: (e) => { err = e.message; },
+  });
+  enc.configure({ codec: 'avc1.640028', width: 1920, height: 1080, bitrate, bitrateMode: 'variable', framerate: fps,
+    latencyMode: 'quality', avc: { format: 'avc' } });
+  const t0 = performance.now();
+  for (let i = 0; i < n && !err; i++) {
+    frame(start + i / fps);
+    const f = new VideoFrame(canvas, { timestamp: Math.round((i * 1e6) / fps), duration: Math.round(1e6 / fps) });
+    enc.encode(f, { keyFrame: i % (2 * fps) === 0 });
+    f.close();
+    while (enc.encodeQueueSize > 3) await new Promise((r) => setTimeout(r, 0));
+    if (i % 300 === 0) await sending;
+  }
+  await enc.flush();
+  enc.close();
+  flush();
+  await sending;
+  if (err) throw new Error('codificador: ' + err);
+  return { frames: n, samples, avcC, color, seconds: (performance.now() - t0) / 1000 };
+};
+window.ready = true;
+</script>
+</body>
+</html>

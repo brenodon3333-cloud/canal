@@ -1,0 +1,11 @@
+[
+  {"scene": 0, "amb": "saguao", "a": 1},
+  {"scene": 1, "amb": "saguao", "a": 0.9},
+  {"scene": 2, "amb": "saguao", "a": 0.8},
+  {"scene": 3, "amb": "pista", "a": 1},
+  {"scene": 4, "amb": "saguao", "a": 0.9},
+  {"scene": 5, "amb": "nada"},
+  {"scene": 6, "amb": "nada"},
+  {"scene": 7, "amb": "saguao", "a": 0.6},
+  {"scene": 8, "amb": "saguao", "a": 0.8}
+]
