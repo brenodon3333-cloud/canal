@@ -1,0 +1,37 @@
+{
+ "arquivo": "voz48k.wav",
+ "origem": "guia_completa.wav",
+ "linhas": {
+  "L1": {
+   "ini": 1.82,
+   "fim": 3.15,
+   "palavras": [
+    {
+     "p": "A",
+     "ini": 1.86,
+     "fim": 2.18
+    },
+    {
+     "p": "cobaia",
+     "ini": 2.248,
+     "fim": 2.288
+    },
+    {
+     "p": "aperta",
+     "ini": 2.328,
+     "fim": 2.54
+    },
+    {
+     "p": "o",
+     "ini": 2.608,
+     "fim": 2.648
+    },
+    {
+     "p": "botão.",
+     "ini": 2.688,
+     "fim": 2.98
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,8 @@
+origem: /projects/sandbox/canal/episodios/ep01-elevador/narracao/_guia/guia_completa.wav
+duração: 14.52 s
+palavras do texto reconhecidas: 23/24 (96%)
+ouvido: Toda noite a dona Lourdes reclama com o teto. Ela nunca soube quem mora em cima. Descobriu entre o terceiro e o segundo andar.
+ajuste dos inícios (correção do Whisper de 68 ms e bordas por energia): médio 94 ms, máximo 350 ms
+L1: 1.84–4.46 s
+L2: 6.55–8.38 s
+L3: 10.45–12.68 s

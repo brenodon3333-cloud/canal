@@ -1,0 +1,8 @@
+origem: episodios/prova-bolo/narracao/_guia/guia_completa.wav
+duração: 12.98 s
+palavras do texto reconhecidas: 17/18 (94%)
+ouvido: A Bia nunca tinha feito um bolo. O Nico prometeu ser sincero. A sinceridade ficou para outro dia.
+encaixe na subida de energia: deslocamento médio 121 ms, máximo 510 ms
+L1: 1.81–3.43 s
+L2: 5.45–7.09 s
+L3: 9.13–11.16 s

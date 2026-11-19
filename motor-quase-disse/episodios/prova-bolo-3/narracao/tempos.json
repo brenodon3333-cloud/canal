@@ -1,0 +1,94 @@
+{
+ "arquivo": "voz48k.wav",
+ "origem": "guia_completa.wav",
+ "linhas": {
+  "L1": {
+   "ini": 1.82,
+   "fim": 3.43,
+   "palavras": [
+    {
+     "p": "A",
+     "ini": 1.86,
+     "fim": 1.98
+    },
+    {
+     "p": "Bia",
+     "ini": 2.048,
+     "fim": 2.12
+    },
+    {
+     "p": "nunca",
+     "ini": 2.188,
+     "fim": 2.26
+    },
+    {
+     "p": "tinha",
+     "ini": 2.328,
+     "fim": 2.52
+    },
+    {
+     "p": "feito",
+     "ini": 2.588,
+     "fim": 2.74
+    },
+    {
+     "p": "um",
+     "ini": 2.808,
+     "fim": 2.9
+    },
+    {
+     "p": "bolo.",
+     "ini": 2.968,
+     "fim": 3.28
+    }
+   ]
+  },
+  "L2": {
+   "ini": 5.47,
+   "fim": 7.05,
+   "palavras": [
+    {
+     "p": "O",
+     "ini": 5.51,
+     "fim": 5.6
+    },
+    {
+     "p": "Nico",
+     "ini": 5.668,
+     "fim": 5.72
+    },
+    {
+     "p": "prometeu",
+     "ini": 5.788,
+     "fim": 6.14
+    },
+    {
+     "p": "ser",
+     "ini": 6.208,
+     "fim": 6.34
+    },
+    {
+     "p": "sincero.",
+     "ini": 6.408,
+     "fim": 7.05
+    }
+   ]
+  },
+  "L3": {
+   "ini": 9.11,
+   "fim": 9.97,
+   "palavras": [
+    {
+     "p": "Não",
+     "ini": 9.15,
+     "fim": 9.24
+    },
+    {
+     "p": "precisou.",
+     "ini": 9.308,
+     "fim": 9.8
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,8 @@
+origem: /projects/sandbox/canal/episodios/prova-bolo-2/narracao/_guia/guia_completa.wav
+duração: 11.76 s
+palavras do texto reconhecidas: 14/14 (100%)
+ouvido: A Bia nunca tinha feito um bolo. O Nico prometeu ser sincero. Não precisou.
+ajuste dos inícios (correção do Whisper de 68 ms e bordas por energia): médio 156 ms, máximo 680 ms
+L1: 1.82–3.43 s
+L2: 5.47–7.05 s
+L3: 9.11–9.97 s

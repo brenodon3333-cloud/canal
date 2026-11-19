@@ -1,0 +1,9 @@
+origem: /projects/sandbox/canal/episodios/ep02-porteiro/narracao/_guia/guia_completa.wav
+duração: 17.43 s
+palavras do texto reconhecidas: 22/27 (81%)
+ouvido: Seu alimdo abriu esta porta por 31 anos, hoje era o último dia, ninguém sabe o que dizer, no dia seguinte ele voltou como visita.
+ajuste dos inícios (correção do Whisper de 68 ms e bordas por energia): médio 182 ms, máximo 2140 ms
+L1: 1.84–4.50 s
+L2: 6.60–7.90 s
+L3: 9.98–11.28 s
+L4: 13.33–15.60 s

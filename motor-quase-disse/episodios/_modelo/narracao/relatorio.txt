@@ -1,0 +1,7 @@
+origem: /projects/sandbox/novo-canal/_teste_reconstrucao/episodios/_modelo/narracao/_guia/guia_completa.wav
+duração: 4.96 s
+palavras do texto reconhecidas: 2/5 (40%)
+ouvido: Acobar e aperte o botão.
+ajuste dos inícios (correção do Whisper de 68 ms e bordas por energia): médio 110 ms, máximo 280 ms
+L1: 1.82–3.15 s
+ATENÇÃO: o texto lido difere bastante do roteiro; conferir os disparos por palavra.
